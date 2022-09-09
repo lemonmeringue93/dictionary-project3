@@ -10,8 +10,7 @@ export default function Dictonary() {
     }
 
     function handleKeywordChange(event) {
-        console.log(event.target.value);
-        setKeyword(event.target.value);
+        console.log(event);
     }
 
     return (
