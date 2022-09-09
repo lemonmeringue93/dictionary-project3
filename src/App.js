@@ -1,6 +1,6 @@
-import logo from "./logo.jpeg";
+import logo from './logo.jpeg';
 import './App.css';
-import Dictionary from "./Dictionary";
+import Dictionary from './Dictionary';
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
         alt="logo" />     
     </header>
     <main> 
-      <Dictionary />
+     <Dictionary />
     </main>
     <footer className="App-footer">Coded by Belle Hamner.</footer>
     </div>

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./Dictionary.css";
+import React, { useState } from 'react';
+import './Dictionary.css';
 
 export default function Dictonary() {
     let [keyword, setKeyword] = useState("")
