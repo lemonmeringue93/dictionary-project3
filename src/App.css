@@ -12,3 +12,11 @@
   text-align: center;
   margin: 0 auto;
 }
+
+.App {
+  background-image: url("https://images.pexels.com/photos/4516064/pexels-photo-4516064.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load");
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: black;
+}
