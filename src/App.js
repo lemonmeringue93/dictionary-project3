@@ -12,7 +12,7 @@ export default function App() {
         alt="logo" />     
     </header>
     <main> 
-     <Dictionary />
+     <Dictionary defaultWord="Halo"/>
     </main>
     <footer className="App-footer">Coded by Belle Hamner.</footer>
     </div>
