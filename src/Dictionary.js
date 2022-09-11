@@ -14,7 +14,8 @@ export default function Dictonary(props) {
             ready: true,
             word: response.data[0].word,
             phonetic: response.data[0].phonetic,
-            meanings: response.data[0].meanings[0].definitions[0].definition
+            meanings: response.data[0].meanings[0].definitions[0].definition,
+            audio: response.data[0].phonetics[0].audio
         })
     }
 
@@ -38,9 +39,11 @@ export default function Dictonary(props) {
     if (wordData.ready) {
         return (
             <div className="Dictionary">
-                <form onSubmit={handleSubmit}>   
+                <form onSubmit={handleSubmit}>  
+                <label>What do you want to know?</label> 
                 <input type="search" 
                 placeholder="Enter a word"
+                class="form-control search-input"
                 onChange={handleKeywordChange} />
                 </form>
                 <Information data={wordData}/>

@@ -1,4 +1,5 @@
 .Dictionary {
+    font-family: arial;
     background-color: white;
     background-image: url("https://garden.spoonflower.com/c/10921524/p/f/m/IorcQN8fQ-Gx2SYr8UllyOmoFDBpa5sJXvZmOIVRGRmz77rowf4Z/Solid%20Pale%20Blue%20Gray.jpg");
 }
@@ -6,5 +7,26 @@
 form {
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 20mm;
+    margin-bottom: 10mm;
+}
+
+label {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: block;
+    line-height: 29px;
+}
+
+.Dictionary .search-bar {
+    display: block;
+    height: 64px;
+    color: #666;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 22px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
 }

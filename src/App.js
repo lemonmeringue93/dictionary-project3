@@ -5,15 +5,13 @@ import Dictionary from './Dictionary';
 export default function App() {
   return (
     <div className="App">
-      <body>
-      <header className="App-header">
+      <div className="App-header">
         Dictionary    
-    </header>
+    </div>
     <main> 
      <Dictionary defaultWord="Halo"/>
     </main>
     <footer className="App-footer">Coded by Belle Hamner.</footer>
-    </body>
     </div>
   );
 }
