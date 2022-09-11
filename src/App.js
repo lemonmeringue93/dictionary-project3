@@ -1,20 +1,19 @@
-import logo from './logo.jpeg';
+
 import './App.css';
 import Dictionary from './Dictionary';
 
 export default function App() {
   return (
     <div className="App">
+      <body>
       <header className="App-header">
-        <img src={logo}
-        className="App-logo
-        img-fluid"
-        alt="logo" />     
+        Dictionary    
     </header>
     <main> 
      <Dictionary defaultWord="Halo"/>
     </main>
     <footer className="App-footer">Coded by Belle Hamner.</footer>
+    </body>
     </div>
   );
 }

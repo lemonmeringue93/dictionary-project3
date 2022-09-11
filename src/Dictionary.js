@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Dictionary.css';
 import axios from 'axios';
-import Definition from './Definition';
+import Information from './Information';
 
 export default function Dictonary(props) {
     const [wordData, setWordData] = useState({ready: false});
@@ -43,7 +43,7 @@ export default function Dictonary(props) {
                 placeholder="Enter a word"
                 onChange={handleKeywordChange} />
                 </form>
-                <Definition data={wordData}/>
+                <Information data={wordData}/>
             </div>
         );
     } else {
