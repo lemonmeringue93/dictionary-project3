@@ -12,7 +12,9 @@ export default function Dictonary(props) {
         
         setWordData({
             ready: true,
-            word: response.data.word
+            word: response.data[0].word,
+            phonetic: response.data[0].phonetic,
+            meanings: response.data[0].meanings[0].definitions[0].definition
         })
     }
 
@@ -41,7 +43,7 @@ export default function Dictonary(props) {
                 placeholder="Enter a word"
                 onChange={handleKeywordChange} />
                 </form>
-                <Definition data={setWordData}/>
+                <Definition data={wordData}/>
             </div>
         );
     } else {
