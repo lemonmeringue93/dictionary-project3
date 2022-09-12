@@ -1,34 +1,22 @@
 import React, { useState } from 'react';
 import './Dictionary.css';
 import axios from 'axios';
-import Information from './Information';
-import Definition from './Definition';
+import Results from './Results';
 
 export default function Dictonary(props) {
-    const [wordData, setWordData] = useState({ready: false});
-    const [keyword, setKeyword] = useState(props.defaultWord);
+       let [keyword, setKeyword] = useState([]);
+        let [results, setResults] = useState("");
 
     function handleResponse(response) {
         console.log(response.data[0]);
-        
-        setWordData({
-            ready: true,
-            word: response.data[0].word,
-            phonetic: response.data[0].phonetic,
-            audio: response.data[0].phonetics[0].audio,
-        })
+        setResults(response.data[0]);
     }
 
-    function search() {
+    function search(event) {
+        event.preventDefault();
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
         console.log(apiUrl);
         axios.get(apiUrl).then(handleResponse);
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        search();
-        //search for a word
     }
 
     function handleKeywordChange(event) {
@@ -36,24 +24,16 @@ export default function Dictonary(props) {
         setKeyword(event.target.value);
     }
 
-    if (wordData.ready) {
-        return (
+    return (
             <div className="Dictionary">
-                <form onSubmit={handleSubmit}>  
+                <form onSubmit={search}>  
                 <label>What do you want to know?</label> 
                 <input type="search" 
                 placeholder="Enter a word"
                 class="form-control search-input"
                 onChange={handleKeywordChange} />
                 </form>
-                <Information data={wordData}/>
-                <Definition data={wordData}/>
+                <Results results={results}/>
             </div>
         );
-    } else {
-        search();
-
-        return "Loading...";
-    }
- 
-}
+    } 
