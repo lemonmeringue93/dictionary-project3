@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Dictionary.css';
 import axios from 'axios';
 import Information from './Information';
+import Definition from './Definition';
 
 export default function Dictonary(props) {
     const [wordData, setWordData] = useState({ready: false});
@@ -14,8 +15,7 @@ export default function Dictonary(props) {
             ready: true,
             word: response.data[0].word,
             phonetic: response.data[0].phonetic,
-            meanings: response.data[0].meanings[0].definitions[0].definition,
-            audio: response.data[0].phonetics[0].audio
+            audio: response.data[0].phonetics[0].audio,
         })
     }
 
@@ -47,6 +47,7 @@ export default function Dictonary(props) {
                 onChange={handleKeywordChange} />
                 </form>
                 <Information data={wordData}/>
+                <Definition data={wordData}/>
             </div>
         );
     } else {
