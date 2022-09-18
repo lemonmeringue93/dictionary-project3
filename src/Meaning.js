@@ -23,6 +23,8 @@ export default function Meaning(props) {
                         </div>
                     );
                })} 
+               <br />
+               <br />
                <Synonyms synonyms={props.meaning.synonyms} />
         </div>
 

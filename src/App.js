@@ -1,12 +1,13 @@
 
 import './App.css';
 import Dictionary from './Dictionary';
+import logoswan from './logoswan.png';
 
 export default function App() {
   return (
     <div className="App">
       <div className="App-header">
-        Dictionary    
+        <img src={logoswan} className="App-logo img-fluid" alt="logo" />
     </div>
     <main> 
      <Dictionary defaultWord="Halo"/>
