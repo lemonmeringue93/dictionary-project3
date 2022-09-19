@@ -1,7 +1,13 @@
 .App {
-  padding: 200px;
-  background-image: url(https://images.pexels.com/photos/10305970/pexels-photo-10305970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-  background-repeat: no-repeat;
-  background-color: transparent !important;
+    background-image: 
+    url(
+  "https://images.pexels.com/photos/1172849/pexels-photo-1172849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-size: cover;
+  height: 600vh;
+  background-repeat: no-repeat;
+  }
+
+footer {
+    text-align: center;
+    margin: 0 auto;
 }

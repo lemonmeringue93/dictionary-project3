@@ -1,0 +1,19 @@
+.word {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'Quicksand';
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.meanings {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'Quicksand';
+    font-size: 20px;
+}

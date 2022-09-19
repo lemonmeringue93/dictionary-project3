@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Results from './Results';
+import './Dictionary.css';
 
 export default function Dictonary(props) {
        let [keyword, setKeyword] = useState(props.defaultKeyword);
@@ -45,7 +46,7 @@ export default function Dictonary(props) {
                 </form>
                
                  <div className="hint">
-                    Suggested words: sunset, wine, cell, powerhouse..
+                    Suggested words: sunset, thwart, egregious
                 </div>
 
                 <br />
