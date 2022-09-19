@@ -1,5 +1,5 @@
 import React from "react"; 
 
 export default function Photos(props) {
-    return "hhhhhhhh";
+    return "Hello from Photos";
 }
