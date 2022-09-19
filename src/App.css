@@ -3,9 +3,11 @@
     url(
   "https://images.pexels.com/photos/13398530/pexels-photo-13398530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-size: cover;
-  height: 500vh;
+  height: 700vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  object-fit: fill;
+  max-width: 100%;
   }
 
 footer {
