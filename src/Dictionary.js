@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Results from './Results';
 import './Dictionary.css';
+import Photos from './Photos';
 
 export default function Dictonary(props) {
        let [keyword, setKeyword] = useState(props.defaultKeyword);
-        let [results, setResults] = useState(null);
-        let [loaded, setLoaded] = useState(false);
+       let [results, setResults] = useState(null);
+       let [loaded, setLoaded] = useState(false);
+       let [photos, setPhotos] = useState(null);
+
 
     function handleResponse(response) {
         console.log(response.data[0]);
@@ -14,7 +17,7 @@ export default function Dictonary(props) {
     }
 
     function handlePexelsResponse(response) {
-         console.log(response.data);
+         setPhotos(response.data.photos);
 
     }
 
@@ -60,9 +63,10 @@ export default function Dictonary(props) {
                 </div>
 
                 <br />
-
+                
+                <Photos photos={photos}/>
                 <Results results={results}/>
-
+                
             </div>
         );
     } else {
