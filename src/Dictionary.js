@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import './Dictionary.css';
 import axios from 'axios';
 import Results from './Results';
 
 export default function Dictonary(props) {
        let [keyword, setKeyword] = useState(props.defaultKeyword);
-        let [results, setResults] = useState("");
+        let [results, setResults] = useState(null);
         let [loaded, setLoaded] = useState(false);
 
     function handleResponse(response) {
@@ -14,7 +13,6 @@ export default function Dictonary(props) {
     }
 
     function search() {
-              //documentation: https://dictionarapi.dev
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse); 
@@ -38,19 +36,22 @@ export default function Dictonary(props) {
     if (loaded) {
         return (
             <div className="Dictionary">
-                <section>
+               
                 <form onSubmit={handleSubmit}>  
                 <input type="search" 
                 placeholder="Enter a word"
-                class="form-control search-input"
+                class="search-bar"
                 onChange={handleKeywordChange} />
                 </form>
-                <div className="hint">
+               
+                 <div className="hint">
                     Suggested words: sunset, wine, cell, powerhouse..
                 </div>
-                </section>
+
                 <br />
+
                 <Results results={results}/>
+
             </div>
         );
     } else {
