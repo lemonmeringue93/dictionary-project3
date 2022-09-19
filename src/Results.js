@@ -10,7 +10,7 @@ export default function Results(props) {
                 
                 <div className="word">
                 <h2>{props.results.word}</h2>
-                <br />
+                
                 <a  href={props.results.phonetics[0].audio} target="_blank" rel="noreferrer">
                 Listen
                 </a>
@@ -18,6 +18,7 @@ export default function Results(props) {
                 <section className="text">{props.results.phonetic}</section>
                 </div>
 
+       
                 {props.results.meanings.map(function(meaning, index) {
                    return (
                    <section key={index}>
@@ -25,6 +26,7 @@ export default function Results(props) {
                     </section>
                     );
                 })}
+         
             </div>
         );
     } else {
