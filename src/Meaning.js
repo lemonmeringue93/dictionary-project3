@@ -17,9 +17,7 @@ export default function Meaning(props) {
                         <li>
                         {definition.definition}
                         </li>
-
-                        <br />
-                        <i>"{definition.example}"</i> 
+                        <i>{definition.example}</i> 
                         </p>
                         </div>
                     );

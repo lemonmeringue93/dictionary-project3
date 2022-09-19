@@ -13,11 +13,21 @@ export default function Dictonary(props) {
         setResults(response.data[0]);
     }
 
+    function handlePexelsResponse(response) {
+         console.log(response.data);
+
+    }
+
     function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse); 
-     }
+
+    let pexelsApiKey = "563492ad6f91700001000001d4b3ce8b922143368e97af586ea049a0";
+    let pexelsApiUrl = `https:api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
+    }
 
     function handleSubmit(event) {
         event.preventDefault();
